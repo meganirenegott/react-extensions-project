@@ -2,6 +2,34 @@ import { useState } from "react";
 import "./App.css";
 import Card from "./Components/Card.jsx";
 import data from "./data.js";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+function WebPages() {
+  return (
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
+  );
+}
+
 
 function App() {
   const [extensions, setExtensions] = useState(data);
