@@ -140,3 +140,7 @@ background-color: #0b1330; /* dark background */
 .react-switch .react-switch-handle {
   transition: all 0.2s;
 }
+@media (max-width: 600px) {
+.cards-container {    grid-template-columns: 1fr;
+  }
+}
